@@ -1,0 +1,6 @@
+<h2>Featured Heroes</h2>
+<div class="hero-container">
+  <mat-card *ngFor="let hero of featuredHeroes" [routerLink]="['/heroes', hero.id]" class="hero-card" matRipple>
+    {{hero.name}}
+  </mat-card>
+</div>

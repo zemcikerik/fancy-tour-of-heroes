@@ -1,0 +1,30 @@
+<div class="container">
+  <div *ngIf="hero; else loading" class="inner-container">
+    <mat-icon class="hero-icon">group</mat-icon>
+    <div class="hero-name">{{hero.name}}</div>
+    <div class="hero-money">This hero has <b>{{hero.money}}</b> gold!</div>
+
+    <section class="item-section">
+      <ng-container *ngIf="hero.items && hero.items.length > 0; then items; else noItems"></ng-container>
+
+      <ng-template #items>
+        <table mat-table [dataSource]="hero.items" class="mat-elevation-z4">
+          <mat-text-column name="id"></mat-text-column>
+          <mat-text-column name="name"></mat-text-column>
+          <mat-text-column name="price"></mat-text-column>
+
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let rowData; columns: columnsToDisplay"></tr>
+        </table>
+      </ng-template>
+
+      <ng-template #noItems>
+        <div>This hero does not own any items!</div>
+      </ng-template>
+    </section>
+  </div>
+
+  <ng-template #loading>
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </ng-template>
+</div>

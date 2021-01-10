@@ -1,0 +1,23 @@
+<div class="container">
+  <div *ngIf="item; else loading">
+    <mat-icon class="item-icon">group</mat-icon>
+    <div class="item-name">{{item.name}}</div>
+
+    <section class="item-deal-section">
+      <div class="item-price">This item is worth <b>{{item.price}}</b> gold.</div>
+
+      <div *ngIf="item.isPurchasable; else hasOwner">
+        <div>You can buy this item in the shop!</div>
+        <button mat-button [routerLink]="'/shop'">Visit Shop</button>
+      </div>
+
+      <ng-template #hasOwner>
+        <div>This item can't be purchased!</div>
+      </ng-template>
+    </section>
+  </div>
+
+  <ng-template #loading>
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </ng-template>
+</div>

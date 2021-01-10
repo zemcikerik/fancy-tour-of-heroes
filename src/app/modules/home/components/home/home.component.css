@@ -1,0 +1,12 @@
+.hero-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.hero-card {
+  margin: 10px;
+  width: 10vw;
+  height: 10vw;
+  line-height: 10vw;
+  text-align: center;
+}

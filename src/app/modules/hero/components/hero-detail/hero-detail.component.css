@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.inner-container {
+  width: 100%;
+}
+
+.hero-icon {
+  font-size: 100px;
+  width: 100px;
+}
+
+.hero-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.item-section {
+  margin-top: 10px;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+}

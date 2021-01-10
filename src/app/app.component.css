@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidenav-container {
+  flex-grow: 1;
+}
+
+mat-icon {
+  margin: 4px;
+}
+
+mat-sidenav {
+  width: 10vw;
+}
+
+mat-sidenav-content {
+  padding: 10px;
+}
